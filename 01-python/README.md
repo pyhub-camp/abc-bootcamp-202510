@@ -22,13 +22,13 @@
 
 ## 🎯 일차별 커리큘럼
 
-| 일차 | 주제 | 핵심 내용 | 결과물 |
-|------|------|-----------|--------|
-| **1일차** | [AI와 함께 첫 웹 앱 만들기](01%EC%9D%BC%EC%B0%A8---AI%EC%99%80-%ED%95%A8%EA%BB%98-%EC%B2%AB-%EC%9B%B9-%EC%95%B1-%EB%A7%8C%EB%93%A4%EA%B8%B0%5C.md) | Python, VSCode, Streamlit 설치<br>DuckDuckGo 이미지 검색<br>OpenAI API 사용 | 이미지 검색 앱, AI 질문 도우미 |
-| **2일차** | [실생활 자동화 앱 만들기](02%EC%9D%BC%EC%B0%A8---%EC%8B%A4%EC%83%9D%ED%99%9C-%EC%9E%90%EB%8F%99%ED%99%94-%EC%95%B1-%EB%A7%8C%EB%93%A4%EA%B8%B0%5C.md) | QR 코드 생성 (qrcode, pillow)<br>웹 크롤링 (BeautifulSoup) | QR 코드 생성기, 뉴스 크롤러 |
-| **3일차** | [AI 슈퍼파워 앱 만들기](03%EC%9D%BC%EC%B0%A8---AI-%EC%8A%88%ED%8D%BC%ED%8C%8C%EC%9B%8C-%EC%95%B1-%EB%A7%8C%EB%93%A4%EA%B8%B0%5C.md) | API 연동 (requests)<br>OpenWeatherMap API<br>OpenAI/Claude API | 날씨 앱, AI 챗봇 |
-| **4일차** | [내 문제 해결하는 앱 만들기](04%EC%9D%BC%EC%B0%A8---%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B0%9C%EB%B0%9C%5C.md) | 문제 정의 및 아이디어 구체화<br>AI와 협업 개발 | 개인 프로젝트 (자유 주제) |
-| **5일차** | [프로젝트 완성](05%EC%9D%BC%EC%B0%A8---%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%99%84%EC%84%B1-%EB%B0%8F-%EB%B0%9C%ED%91%9C%5C.md) | 마무리 및 발표<br>피드백 및 학습 정리 | 완성된 프로젝트 |
+| 일차      | 주제                                            | 핵심 내용                                                              | 결과물                 |
+| ------- | --------------------------------------------- | ------------------------------------------------------------------ | ------------------- |
+| **1일차** | [AI와 함께 첫 웹 앱 만들기](01%EC%9D%BC%EC%B0%A8%20-%20AI%EC%99%80%20%ED%95%A8%EA%BB%98%20%EC%B2%AB%20%EC%9B%B9%20%EC%95%B1%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md) | Python, VSCode, Streamlit 설치<br>DuckDuckGo 이미지 검색<br>OpenAI API 사용 | 이미지 검색 앱, AI 질문 도우미 |
+| **2일차** | [실생활 자동화 앱 만들기](02%EC%9D%BC%EC%B0%A8%20-%20%EC%8B%A4%EC%83%9D%ED%99%9C%20%EC%9E%90%EB%8F%99%ED%99%94%20%EC%95%B1%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md)       | QR 코드 생성 (qrcode, pillow)<br>웹 크롤링 (BeautifulSoup)                 | QR 코드 생성기, 뉴스 크롤러   |
+| **3일차** | [AI 슈퍼파워 앱 만들기](03%EC%9D%BC%EC%B0%A8%20-%20AI%20%EC%8A%88%ED%8D%BC%ED%8C%8C%EC%9B%8C%20%EC%95%B1%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md)       | API 연동 (requests)<br>OpenWeatherMap API<br>OpenAI/Claude API       | 날씨 앱, AI 챗봇         |
+| **4일차** | [내 문제 해결하는 앱 만들기](04%EC%9D%BC%EC%B0%A8%20-%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C.md)           | 문제 정의 및 아이디어 구체화<br>AI와 협업 개발                                      | 개인 프로젝트 (자유 주제)     |
+| **5일차** | [프로젝트 공유](05%EC%9D%BC%EC%B0%A8%20-%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B3%B5%EC%9C%A0.md)                   | 마무리 및 발표<br>피드백 및 학습 정리                                            | 완성된 프로젝트            |
 
 ---
 
@@ -37,7 +37,7 @@
 ### 교육생용 문서
 - **[소개](%EC%86%8C%EA%B0%9C.md)**: 사전 학습 자료 (왜 Python인가?, AI 시대 개발자의 역할)
   - **중요**: 1일차 수업 전에 읽어오도록 안내
-- **[파이썬 활용 사례 모음](%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%99%9C%EC%9A%A9-%EC%82%AC%EB%A1%80-%EB%AA%A8%EC%9D%8C.md)**: 실전 예시 20+ 가지
+- **[파이썬 활용 사례 모음](%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%ED%99%9C%EC%9A%A9%20%EC%82%AC%EB%A1%80%20%EB%AA%A8%EC%9D%8C.md)**: 실전 예시 20+ 가지
 
 ### 참고 자료
 - ChatGPT: https://chat.openai.com

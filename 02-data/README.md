@@ -25,18 +25,18 @@
 
 | 일차 | 주제 | 핵심 내용 | 결과물 |
 |------|------|-----------|--------|
-| **1일차** | [pandas 기초](01%EC%9D%BC%EC%B0%A8---pandas-%EA%B8%B0%EC%B4%88%5C.md) | pandas DataFrame 기초<br>데이터 읽기/쓰기, 필터링, 정렬, 집계 | CSV 데이터 분석 |
-| **2일차 (전반부)** | [matplotlib 시각화](02%EC%9D%BC%EC%B0%A8---%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%8B%9C%EA%B0%81%ED%99%94%5C.md) | matplotlib 기초<br>막대/선/파이 그래프, 서브플롯 | 다양한 차트 |
-| **2일차 (후반부)** | [Excel 대시보드](02%EC%9D%BC%EC%B0%A8---Excel-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-%EC%9E%90%EB%8F%99%ED%99%94%5C.md) | xlwings로 Excel 자동화<br>4개 차트 대시보드 생성 | Excel 대시보드 |
-| **3일차** | [웹 대시보드](03%EC%9D%BC%EC%B0%A8---%EC%9B%B9-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C%5C.md) | Streamlit 기초<br>웹 대시보드 배포 | 인터랙티브 웹 앱 |
-| **4-6일차** | [가계부 프로젝트](%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8---%EA%B0%80%EA%B3%84%EB%B6%80-%EC%95%B1%5C.md) | 수입/지출 관리<br>통계, 그래프 시각화 | 완성된 가계부 앱 |
+| **1일차** | [pandas 기초](01%EC%9D%BC%EC%B0%A8%20-%20pandas%20%EA%B8%B0%EC%B4%88.md) | pandas DataFrame 기초<br>데이터 읽기/쓰기, 필터링, 정렬, 집계 | CSV 데이터 분석 |
+| **2일차 (전반부)** | [matplotlib 시각화](02%EC%9D%BC%EC%B0%A8%20-%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%8B%9C%EA%B0%81%ED%99%94.md) | matplotlib 기초<br>막대/선/파이 그래프, 서브플롯 | 다양한 차트 |
+| **2일차 (후반부)** | [Excel 대시보드](02%EC%9D%BC%EC%B0%A8%20-%20Excel%20%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C%20%EC%9E%90%EB%8F%99%ED%99%94.md) | xlwings로 Excel 자동화<br>4개 차트 대시보드 생성 | Excel 대시보드 |
+| **3일차** | [웹 대시보드](03%EC%9D%BC%EC%B0%A8%20-%20%EC%9B%B9%20%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C.md) | Streamlit 기초<br>웹 대시보드 배포 | 인터랙티브 웹 앱 |
+| **4-6일차** | [가계부 프로젝트](%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20-%20%EA%B0%80%EA%B3%84%EB%B6%80%20%EC%95%B1.md) | 수입/지출 관리<br>통계, 그래프 시각화 | 완성된 가계부 앱 |
 
 ---
 
 ## 📚 교육 자료
 
 ### 교육생용 문서
-- **[소개](%EC%86%8C%EA%B0%9C.md)**: 사전 학습 자료 (왜 데이터 분석인가?, pandas/matplotlib의 가치)
+- **[소개](../01-python/%EC%86%8C%EA%B0%9C.md)**: 사전 학습 자료 (왜 데이터 분석인가?, pandas/matplotlib의 가치)
   - **중요**: 1일차 수업 전에 읽어오도록 안내
 
 ### 샘플 데이터 파일
@@ -67,7 +67,7 @@
 - [ ] 노트북 (Windows/Mac 무관)
 - [ ] Python 기초 문법 이해 (변수, 함수, 리스트, 딕셔너리)
 - [ ] Excel 기본 사용법 (차트 보는 정도)
-- [ ] [소개](%EC%86%8C%EA%B0%9C.md) 문서 읽어오기 (필수!)
+- [ ] [소개](../01-python/%EC%86%8C%EA%B0%9C.md) 문서 읽어오기 (필수!)
 
 ---
 

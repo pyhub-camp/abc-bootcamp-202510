@@ -185,7 +185,7 @@
 ## 📋 Overview
 
 **왜 데이터 분석을 배워야 할까요?**
-- 본격적인 수업에 앞서, [과정 소개 문서](%EC%86%8C%EA%B0%9C.md)를 먼저 읽어보세요!
+- 본격적인 수업에 앞서, [과정 소개 문서](../01-python/%EC%86%8C%EA%B0%9C.md)를 먼저 읽어보세요!
 - "왜 데이터 분석인가?", "pandas/matplotlib의 가치" 등을 다룹니다.
 
 **오늘 배울 내용**:
@@ -226,7 +226,7 @@ names = df["이름"]
 print(names)
 
 # 여러 열 선택
-subset = df["이름", "나이"](%22%EC%9D%B4%EB%A6%84%22%2C-%22%EB%82%98%EC%9D%B4%22.md)
+subset = df["이름", "나이"](%22%EC%9D%B4%EB%A6%84%22%2C%20%22%EB%82%98%EC%9D%B4%22.md)
 
 # 조건 필터링
 adults = df[df["나이"] >= 20]
@@ -435,7 +435,7 @@ print(job_stats)
 
 # 여러 열에 대한 집계
 print("\n=== 직업별 나이와 연봉 평균 ===")
-multi_stats = df.groupby('직업')['나이', '연봉'](%27%EB%82%98%EC%9D%B4%27%2C-%27%EC%97%B0%EB%B4%89%27.md).mean()
+multi_stats = df.groupby('직업')['나이', '연봉'](%27%EB%82%98%EC%9D%B4%27%2C%20%27%EC%97%B0%EB%B4%89%27.md).mean()
 print(multi_stats)
 ```
 
@@ -464,7 +464,7 @@ df.columns          # 열 이름
 ### 데이터 선택
 ```python
 df['컬럼명']                    # 단일 열 선택
-df['컬럼1', '컬럼2'](%27%EC%BB%AC%EB%9F%BC1%27%2C-%27%EC%BB%AC%EB%9F%BC2%27.md)         # 여러 열 선택
+df['컬럼1', '컬럼2'](%27%EC%BB%AC%EB%9F%BC1%27%2C%20%27%EC%BB%AC%EB%9F%BC2%27.md)         # 여러 열 선택
 df[df['나이'] > 30]            # 조건 필터링
 df.loc[행_인덱스, '컬럼명']     # 라벨 기반 선택
 df.iloc[행_번호, 열_번호]       # 위치 기반 선택
