@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>피라미드 출력기</title>
+  <style>
+    :root { --bg: #0b1020; --panel: #121935; --text: #e9ecff; --muted:#9aa4d6; --accent:#6ea8fe; }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; background: linear-gradient(180deg, #0b1020 0%, #0e1430 100%);
+      color: var(--text); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      display: grid; place-items: center; padding: 24px;
+    }
+    .card { width: min(880px, 100%); background: var(--panel); border: 1px solid #202a55; border-radius: 20px; box-shadow: 0 10px 30px #00000066; }
+    header { padding: 20px 22px; border-bottom: 1px solid #1b2347; display:flex; align-items:center; gap:12px; }
+    header h1 { font-size: 18px; margin: 0; letter-spacing: .3px; }
+    header .badge { margin-left:auto; font-size: 12px; color: var(--muted); }
+    .content { display: grid; grid-template-columns: 1fr; gap: 14px; padding: 18px; }
+    @media (min-width: 860px){ .content{ grid-template-columns: 330px 1fr; } }
+    form { display: grid; gap: 12px; }
+    label { font-size: 12px; color: var(--muted); display:block; margin-bottom: 6px; }
+    input[type="number"], select { width: 100%; border: 1px solid #2a3670; background: #0f1633; color: var(--text); padding: 12px 12px; border-radius: 12px; font-size: 14px; outline: none; }
+    input[type="number"]:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px #6ea8fe33; }
+    .row { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    button { background: linear-gradient(180deg, #6ea8fe, #508bff); border: none; color: #0a1025; font-weight: 700; padding: 12px 14px; border-radius: 12px; cursor: pointer; font-size: 14px; }
+    button:disabled { opacity: .6; cursor: not-allowed; }
+    .subbtns { display:flex; gap:8px; }
+    .ghost { background: #0f1633; color: var(--text); border:1px solid #2a3670; }
+    .help { font-size: 12px; color: var(--muted); }
+
+    .preview { border: 1px dashed #2a3670; border-radius: 14px; padding: 14px; background: #0f1633; }
+    .preview header { border: none; padding: 0; margin: 0 0 10px; }
+    .preview header h2 { margin: 0; font-size: 14px; color: var(--muted); font-weight: 600; }
+    pre { margin: 0; white-space: pre; line-height: 1.15; }
+    .error { color: #ff8794; font-size: 12px; min-height: 18px; }
+    footer { padding: 14px 18px 20px; color: var(--muted); font-size: 12px; border-top: 1px solid #1b2347; display:flex; justify-content: space-between; gap:8px; flex-wrap:wrap; }
+    kbd { background: #0f1633; border: 1px solid #2a3670; border-bottom-width: 2px; padding: 1px 6px; border-radius: 6px; font-size: 11px; color: var(--text); }
+  </style>
+</head>
+<body>
+  <div class="card" role="application" aria-labelledby="app-title">
+    <header>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 20h18M7 20V7l10 4v9" stroke="#6ea8fe" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h1 id="app-title">피라미드 출력기</h1>
+      <div class="badge">left • center • right • diamond</div>
+    </header>
+
+    <div class="content">
+      <form id="form" autocomplete="off">
+        <div>
+          <label for="height">높이 (1~200)</label>
+          <input id="height" name="height" type="number" inputmode="numeric" min="1" max="200" step="1" placeholder="예: 6" required />
+        </div>
+        <div class="row">
+          <div>
+            <label for="mode">모드 (기본: 중앙)</label>
+            <select id="mode" name="mode" aria-label="정렬 모드 선택">
+              <option value="center" selected>center (중앙)</option>
+              <option value="left">left (좌측)</option>
+              <option value="right">right (우측)</option>
+              <option value="diamond">diamond (마름모)</option>
+            </select>
+          </div>
+          <div>
+            <label for="char">문자 (기본: *)</label>
+            <input id="char" name="char" maxlength="1" placeholder="*" />
+          </div>
+        </div>
+        <div class="subbtns">
+          <button type="submit" id="renderBtn">출력 (<kbd>Enter</kbd>)</button>
+          <button type="button" class="ghost" id="copyBtn" title="결과를 클립보드로 복사">복사</button>
+          <button type="button" class="ghost" id="clearBtn">지우기</button>
+        </div>
+        <div class="error" id="error" role="status" aria-live="polite"></div>
+        <p class="help">Tip: <kbd>Enter</kbd>로 출력, <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>C</kbd>로 복사해도 좋아요.</p>
+      </form>
+
+      <section class="preview" aria-labelledby="preview-title">
+        <header><h2 id="preview-title">미리보기</h2></header>
+        <pre id="output" aria-live="polite">(여기에 결과가 표시됩니다)</pre>
+      </section>
+    </div>
+
+    <footer>
+      <span>공백 보존을 위해 <code>&lt;pre&gt;</code> 를 사용합니다.</span>
+      <span>© 2025 Pyramid Builder</span>
+    </footer>
+  </div>
+
+  <script>
+    const form = document.getElementById('form');
+    const heightEl = document.getElementById('height');
+    const modeEl = document.getElementById('mode');
+    const charEl = document.getElementById('char');
+    const output = document.getElementById('output');
+    const errorEl = document.getElementById('error');
+    const copyBtn = document.getElementById('copyBtn');
+    const clearBtn = document.getElementById('clearBtn');
+
+    const clamp = (v, min, max) => Math.min(Math.max(v, min), max);
+
+    function buildPyramid(n, mode = 'center', ch = '*') {
+      n = clamp(n|0, 1, 200); // 안전한 범위
+      ch = (ch || '*').slice(0,1);
+      const lines = [];
+      const sp = (k) => ' '.repeat(k);
+      const rep = (k) => ch.repeat(k);
+
+      if (mode === 'left') {
+        for (let i = 1; i <= n; i++) lines.push(rep(i));
+      } else if (mode === 'right') {
+        for (let i = 1; i <= n; i++) lines.push(sp(n - i) + rep(i));
+      } else if (mode === 'diamond') {
+        for (let i = 1; i <= n; i++) lines.push(sp(n - i) + rep(2 * i - 1));
+        for (let i = n - 1; i >= 1; i--) lines.push(sp(n - i) + rep(2 * i - 1));
+      } else { // center (default)
+        for (let i = 1; i <= n; i++) lines.push(sp(n - i) + rep(2 * i - 1));
+      }
+      return lines.join('\n');
+    }
+
+    function render(e){
+      if (e) e.preventDefault();
+      const raw = heightEl.value.trim();
+      const n = Number(raw);
+      const mode = modeEl.value || 'center';
+      const ch = charEl.value || '*';
+
+      if (!raw || !Number.isInteger(n) || n < 1) {
+        errorEl.textContent = '유효한 정수를 입력하세요 (1~200).';
+        output.textContent = '(여기에 결과가 표시됩니다)';
+        return;
+      }
+      errorEl.textContent = '';
+      output.textContent = buildPyramid(n, mode, ch);
+    }
+
+    form.addEventListener('submit', render);
+
+    // 즉시 미리보기 업데이트 (입력 변화 시)
+    [heightEl, modeEl, charEl].forEach(el => el.addEventListener('input', () => {
+      if (heightEl.value) render();
+    }));
+
+    copyBtn.addEventListener('click', async () => {
+      const text = output.textContent || '';
+      try {
+        await navigator.clipboard.writeText(text);
+        copyBtn.textContent = '복사됨!';
+        setTimeout(() => (copyBtn.textContent = '복사'), 900);
+      } catch {
+        copyBtn.textContent = '복사 실패';
+        setTimeout(() => (copyBtn.textContent = '복사'), 1200);
+      }
+    });
+
+    clearBtn.addEventListener('click', () => {
+      output.textContent = '(여기에 결과가 표시됩니다)';
+      errorEl.textContent = '';
+    });
+
+    // 기본 포커스 & 기본 모드 안내
+    heightEl.focus();
+    modeEl.value = 'center';
+  </script>
+</body>
+</html>
