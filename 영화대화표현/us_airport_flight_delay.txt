@@ -1,0 +1,19 @@
+Ticketing Agent: Good afternoon. I just got news that your flight to Chicago is delayed by two hours.
+티켓팅 승무원: 안녕하세요. 시카고행 비행기가 두 시간 지연되었다는 소식을 방금 받았어요.
+Customer: Oh no, I have a meeting tonight. Is there another flight I can take?
+고객: 이런, 오늘 밤에 회의가 있어요. 제가 탈 수 있는 다른 비행기가 있나요?
+Ticketing Agent: Let me check. There is a flight leaving in ninety minutes with a few seats left.
+티켓팅 승무원: 확인해 볼게요. 아흔 분 후에 출발하는 비행기가 있는데 좌석이 조금 남아 있어요.
+Customer: That sounds good. Can you move me to that flight?
+고객: 좋아요. 그 비행기로 옮겨 줄 수 있나요?
+Ticketing Agent: Sure, I can rebook you now. May I see your ID and ticket, please?
+티켓팅 승무원: 물론이죠. 지금 바로 다시 예약해 드릴게요. 신분증과 티켓을 보여 주시겠어요?
+Customer: Here you go. Thank you for helping me.
+고객: 여기 있어요. 도와주셔서 감사해요.
+
+Vocabulary:
+- delay: 지연시키다, 늦추다
+- rebook: 다시 예약하다
+- seat: 좌석
+- ID: 신분증
+- flight: 항공편

@@ -1,0 +1,19 @@
+Ticketing Agent: Hello, I heard your suitcase did not arrive. Is that right?
+티켓팅 승무원: 안녕하세요, 여행 가방이 도착하지 않았다고 들었어요. 맞나요?
+Customer: Yes, my blue suitcase is missing. It was supposed to be on Flight 218.
+고객: 네, 파란색 여행 가방이 없어졌어요. 218편에 있어야 했어요.
+Ticketing Agent: I will file a report. Can you describe the suitcase and give me your phone number?
+티켓팅 승무원: 신고서를 작성할게요. 가방을 설명해 주시고 전화번호도 알려주실 수 있을까요?
+Customer: It has a yellow ribbon and my number is 555-2043.
+고객: 노란 리본이 달려 있고 제 번호는 555-2043이에요.
+Ticketing Agent: Thank you. We will message you as soon as we find it.
+티켓팅 승무원: 감사합니다. 찾는 대로 바로 연락드릴게요.
+Customer: I appreciate it. I will wait for your update.
+고객: 감사합니다. 연락을 기다릴게요.
+
+Vocabulary:
+- suitcase: 여행 가방
+- missing: 사라진, 분실된
+- file a report: 신고서를 작성하다
+- describe: 설명하다
+- message: 연락하다, 문자 보내다
