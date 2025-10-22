@@ -1,0 +1,15 @@
+# 웹 서버/클라이언트 기반 Interactive Shell
+jupyter
+
+# 계산 라이브러리
+numpy
+
+# 데이터 분석 라이브러리
+pandas
+
+# 지도 시각화 라이브러리
+folium
+
+# 차트 시각화 라이브러리
+plotly
+
