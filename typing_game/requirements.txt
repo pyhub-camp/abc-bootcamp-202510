@@ -1,0 +1,16 @@
+# CLI에서 게임스러운 화면을 만들때 사용
+windows-curses
+
+# 이 줄은 무시됩니다.
+
+# HTTP 요청 라이브러리이며, 간단한 크롤링에 사용됩니다.
+requests
+
+# OpenAI API 활용 시에 사용
+openai
+
+# 웹 기반의 Python Interactive Shell (서버/클라이언트 구조)
+jupyter
+
+# 데이터 분석
+pandas
